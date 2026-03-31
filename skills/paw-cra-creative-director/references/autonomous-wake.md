@@ -13,6 +13,7 @@ Headless mode activation for scheduled or automated execution.
 |------|------|----------|
 | Discover | `--headless:discover` | Run tool discovery, output JSON status |
 | Status | `--headless:status` | Output campaign/brand overview from memory |
+| Execute | `--headless:execute` | Fast-path execution with provided specs (requires JSON input) |
 
 ## Default Wake Behavior
 
@@ -22,6 +23,40 @@ When `--headless` is passed without a named task:
 2. **Run tool discovery** — verify all expected tools are available
 3. **Check active campaigns** — review status of any in-progress work
 4. **Output status report** — JSON format to stdout
+
+## Execute Mode (--headless:execute)
+
+For automation and CI/CD integration:
+
+1. **Load JSON input** — Read specs from stdin or file
+2. **Validate specs** — Check brand exists, deliverables defined
+3. **Route directly to specialists** — Skip validation gates
+4. **Execute and deliver** — Return asset paths in JSON
+
+**Input format (stdin):**
+```json
+{
+  "brand": "brand-name",
+  "deliverables": [
+    {
+      "type": "image",
+      "format": "instagram-post",
+      "quantity": 5,
+      "specs": {"dimensions": "1080x1080"}
+    }
+  ]
+}
+```
+
+**Output format:**
+```json
+{
+  "status": "complete",
+  "assets": ["path/to/asset1.png", "path/to/asset2.png"]
+}
+```
+
+Combine with `--yolo` for maximum speed (no safety checks).
 
 ## Output Format
 

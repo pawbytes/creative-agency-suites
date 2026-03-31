@@ -14,9 +14,9 @@ Gather from conversation or brand context:
 
 ## Research Process
 
-### Choose Your Framework
+### Step 1: Select Framework
 
-Before diving in, select the right tool for the situation:
+Before diving in, choose the right tool:
 
 | Situation | Framework |
 |-----------|-----------|
@@ -26,52 +26,27 @@ Before diving in, select the right tool for the situation:
 | Repositioning brand | Perceptual Mapping |
 | Quantitative comparison | Competitive Profile Matrix |
 
-### Step 1: Identify Competitors
+### Step 2: Gather Competitor Data
 
-If not provided, discover competitors:
-
+**Identify competitors** (if not provided):
 - Search "{industry} brands similar to {brand}"
 - Use Exa `web_search_exa` for discovery
 - Check industry directories and rankings
 
-### Step 2: Analyze Competitors
+**Analyze using appropriate tools:**
 
-**For Public Content (Exa MCP Tools):**
-- Website content via `crawling_exa`
-- Published articles and blog posts
-- Press releases and news coverage
-
-**For Social Media Profiles (Agent-Browser):**
-
-Use agent-browser with authenticated Chrome profile to access competitor social profiles:
-
-```bash
-# LinkedIn company page
-agent-browser --profile ~/.strategist-profile open https://linkedin.com/company/{competitor}
-agent-browser wait --load networkidle
-agent-browser screenshot --full ./research/{competitor}-linkedin.png
-
-# Instagram profile (requires login)
-agent-browser --state "{project-root}/.pawbytes/creative-suites/.auth/session.json" open https://instagram.com/{competitor}
-agent-browser snapshot -i  # Get interactive elements
-agent-browser screenshot --full ./research/{competitor}-instagram.png
-
-# Extract post text for analysis
-agent-browser get text article > ./research/{competitor}-posts.txt
-```
+| Content Type | Tool |
+|--------------|------|
+| Public websites, articles, press | Exa `crawling_exa` |
+| Social profiles (LinkedIn, Instagram, TikTok) | Agent-browser with auth |
+| Gated/membership content | Agent-browser with auth |
 
 See `./browser-tools.md` for authentication setup.
 
-**Analysis Checklist:**
-- Website and content strategy
-- Social presence and engagement patterns
-- Messaging themes and brand voice
-- Content gaps and opportunities
-- Recent campaigns and promotions
+### Step 3: Apply Framework & Synthesize
 
-### Step 3: Synthesize Findings
-
-- Positioning map (how competitors differentiate)
+Use the selected framework from `./methodologies.md` to structure analysis. Focus on:
+- Positioning (how competitors differentiate)
 - Content gaps (what's missing in the market)
 - Opportunity areas (where to compete)
 

@@ -10,11 +10,11 @@ When invoked with `--headless` or `-H`, complete the task without interaction.
 
 ## Named Tasks
 
-| Task | Trigger | Behavior |
-|------|---------|----------|
-| `--headless:research` | Explicit | Run competitor scan for active brand |
-| `--headless:trends` | Explicit | Analyze trends for active brand's industry |
-| `--headless` (no task) | Default | Check for pending research tasks in active campaigns |
+| Task | Trigger | Maps To | Behavior |
+|------|---------|---------|----------|
+| `--headless:research` | Explicit | Competitor Research | Run competitor scan for active brand |
+| `--headless:trends` | Explicit | Trend Spotting | Analyze trends for active brand's industry |
+| `--headless` (no task) | Default | Context-dependent | Check for pending research tasks in active campaigns |
 
 ## Research Task Flow
 

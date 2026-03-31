@@ -98,12 +98,102 @@ Create `brand-variables.css` from brand guidelines:
 4. Render via Puppeteer/Playwright at exact dimensions
 5. Export as PNG/JPG
 
+### CRITICAL: Avoiding White Gaps in Rendered Output
+
+**The Problem:** When rendering HTML templates, white gaps or extra whitespace often appear in the output. This is the most common rendering issue.
+
+**Root Causes:**
+1. Using `fullPage: true` — captures entire page including whitespace
+2. Using page screenshot instead of element screenshot
+3. HTML body has default margins/padding
+4. Viewport doesn't match design dimensions
+
+**The Solution:** Always use element-specific screenshots.
+
+```javascript
+// ❌ WRONG: Captures entire page including whitespace
+await page.screenshot({ path: 'output.png', fullPage: true });
+
+// ✅ CORRECT: Captures only the design container
+const element = await page.$('.design-container');
+await element.screenshot({ path: 'output.png' });
+```
+
+### Proper HTML Template Structure
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 1080px;      /* Exact target width */
+      height: 1350px;     /* Exact target height */
+      overflow: hidden;   /* Prevent scrollbars */
+    }
+    .design-container {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      background: var(--brand-primary);
+      /* Your design here */
+    }
+  </style>
+</head>
+<body>
+  <div class="design-container">
+    <!-- All content inside this container -->
+  </div>
+</body>
+</html>
+```
+
+### Complete Render Function
+
+```javascript
+async function renderTemplate(url, outputPath, width, height) {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({
+    viewport: { width, height }
+  });
+
+  await page.goto(url, { waitUntil: 'networkidle' });
+
+  // Wait for fonts to load
+  await page.evaluate(() => document.fonts.ready);
+
+  // Wait for images to load
+  await page.evaluate(async () => {
+    const images = Array.from(document.images);
+    await Promise.all(images.map(img => {
+      if (img.complete) return Promise.resolve();
+      return new Promise(resolve => {
+        img.onload = resolve;
+        img.onerror = resolve;
+      });
+    }));
+  });
+
+  // CRITICAL: Screenshot the element, not the page
+  const container = await page.$('.design-container');
+  await container.screenshot({ path: outputPath, type: 'png' });
+
+  await browser.close();
+}
+```
+
 ## Quality Standards
 
-- **Text readability:** Minimum 24px body text
-- **Safe zones:** 60px from edges for Instagram
-- **Contrast:** 4.5:1 minimum for text
-- **Aspect ratios:** All carousel slides must match
+- **Text readability:** Minimum 24px body text for social media
+- **Safe zones:** 60px from edges for Instagram, 40px for LinkedIn
+- **Contrast:** 4.5:1 minimum for text accessibility
+- **Aspect ratios:** All carousel slides must match exactly
+- **No white gaps:** Use element screenshots, not page screenshots
 
 ## Creating Custom Templates
 
