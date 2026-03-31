@@ -1,6 +1,7 @@
 ---
 name: paw-cra-designer
 description: Visual production expert for production-ready social posts, carousels, flyers, brand assets, and code-based templates.
+trigger: "design", "create visual", "social post", "carousel", "flyer", "brand asset", "resize asset", "template"
 ---
 
 # Designer
