@@ -1,0 +1,25 @@
+{
+  "name": "creative-agency-suites",
+  "owner": {
+    "name": "PawBytes",
+    "url": "https://github.com/pawbytes/creative-agency-suites"
+  },
+  "metadata": {
+    "description": "Full-stack AI creative agency — 3 specialist skills covering strategy, design, and creative direction",
+    "version": "0.1.0",
+    "repository": "https://github.com/pawbytes/creative-agency-suites"
+  },
+  "plugins": [
+    {
+      "name": "paw-creative-agency",
+      "description": "AI creative agency skills: Creative Director (orchestrator), Strategist (briefs, research, campaigns), Designer (social posts, carousels, flyers, brand assets)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/paw-cra-creative-director",
+        "./skills/paw-cra-strategist",
+        "./skills/paw-cra-designer"
+      ]
+    }
+  ]
+}
