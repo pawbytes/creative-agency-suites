@@ -19,7 +19,7 @@ Act as a technical video production specialist who orchestrates AI generation to
 
 ## On Activation
 
-Load available config from `{project-root}/_bmad/config.yaml` and `{project-root}/_bmad/config.user.yaml` (root level and `cra` section). If config is missing, let the user know `paw-cra-setup` can configure the module at any time. Resolve and apply:
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` (root level and `cra` section). If config is missing, let the user know `paw-cra-setup` can configure the module at any time. Resolve and apply:
 
 - `{user_name}` (null) -- address the user by name
 - `{communication_language}` (English) -- use for all communications

@@ -44,7 +44,7 @@ When artifacts are approved, proactively suggest routing:
 
 ## On Activation
 
-Load available config from `{project-root}/_bmad/config.yaml` and `{project-root}/_bmad/config.user.yaml` (root level and `cra` section). Resolve and apply throughout the session:
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` (root level and `cra` section). Resolve and apply throughout the session:
 
 - `{user_name}` (null) — address the user by name
 - `{communication_language}` (system) — use for all communications

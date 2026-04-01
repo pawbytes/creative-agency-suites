@@ -15,7 +15,7 @@ Batch visual production for campaigns — transforms a content calendar or campa
 
 ## On Activation
 
-Load available config from `{project-root}/_bmad/config.yaml` and `{project-root}/_bmad/config.user.yaml` (root level and `cra` section). Resolve and apply throughout the session (defaults in parens):
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` (root level and `cra` section). Resolve and apply throughout the session (defaults in parens):
 
 - `{user_name}` (null) — address the user by name
 - `{communication_language}` (English) — use for all communications

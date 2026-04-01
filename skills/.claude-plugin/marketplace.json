@@ -1,0 +1,26 @@
+{
+  "name": "paw-cra-setup",
+  "version": "0.3.7",
+  "description": "Setup skill for Pawbytes Creative Suites module",
+  "owner": "pawbytes",
+  "license": "MIT",
+  "homepage": "https://github.com/pawbytes/creative-suites",
+  "repository": "https://github.com/pawbytes/creative-suites",
+  "skills": [
+    "paw-cra-agent-creative-director",
+    "paw-cra-agent-designer",
+    "paw-cra-agent-strategist",
+    "paw-cra-agent-video-producer",
+    "paw-cra-campaign-orchestration",
+    "paw-cra-content-research",
+    "paw-cra-design-social",
+    "paw-cra-design-brand",
+    "paw-cra-design-batch",
+    "paw-cra-video-shortform",
+    "paw-cra-video-longform",
+    "paw-cra-video-clips",
+    "paw-cra-multi-platform-export",
+    "paw-cra-quality-control",
+    "paw-cra-setup"
+  ]
+}

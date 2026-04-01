@@ -5,7 +5,7 @@ Headless mode activated. Executing video production task without interaction.
 ## Wake Sequence
 
 1. **Load Configuration**
-   - Read `{project-root}/_bmad/config.yaml` and `{project-root}/_bmad/config.user.yaml`
+   - Read `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml`
    - Extract: user_name, communication_language, fal_key, elevenlabs_api_key, output_directory
 
 2. **Load Shared Memory**

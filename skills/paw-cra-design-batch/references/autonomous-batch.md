@@ -5,7 +5,7 @@ Headless mode activated. Execute the full batch pipeline without interaction.
 ## Wake Sequence
 
 1. **Load Configuration**
-   - Read `_bmad/config.yaml` and `_bmad/config.user.yaml`
+   - Read `.pawbytes/config/config.yaml` and `.pawbytes/config/config.user.yaml`
    - Extract: user_name, communication_language, fal_key, output_directory
 
 2. **Load Shared Memory**

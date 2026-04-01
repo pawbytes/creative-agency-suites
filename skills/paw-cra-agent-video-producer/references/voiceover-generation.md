@@ -18,7 +18,7 @@ User requests voiceover, narration, AI voice, or text-to-speech for video conten
 
 ## Prerequisites
 
-- `elevenlabs_api_key` must be configured in `{project-root}/_bmad/config.user.yaml` under `cra` section
+- `elevenlabs_api_key` must be configured in `{project-root}/.pawbytes/config/config.user.yaml` under `cra` section
 - If no API key is available, inform user and suggest alternatives (manual recording, different TTS service)
 
 ## Process

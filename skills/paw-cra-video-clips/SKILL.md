@@ -17,7 +17,7 @@ Act as a video production engineer who understands both creative storytelling (w
 
 ## On Activation
 
-Load available config from `{project-root}/_bmad/config.yaml` and `{project-root}/_bmad/config.user.yaml` (root level and `cra` section). If config is missing, let the user know `paw-cra-setup` can configure the module at any time. Use sensible defaults for anything not configured.
+Load available config from `{project-root}/.pawbytes/config/config.yaml` and `{project-root}/.pawbytes/config/config.user.yaml` (root level and `cra` section). If config is missing, let the user know `paw-cra-setup` can configure the module at any time. Use sensible defaults for anything not configured.
 
 Resolve and apply:
 

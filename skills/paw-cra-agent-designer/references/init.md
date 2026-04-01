@@ -45,7 +45,7 @@ The agency memory contains:
 
 3. **Do you have a fal.ai API key configured?**
    - Required for AI image generation
-   - Can be set in `_bmad/config.user.yaml` under `cra.fal_key`
+   - Can be set in `.pawbytes/config/config.user.yaml` under `cra.fal_key`
 
 ## Ready
 

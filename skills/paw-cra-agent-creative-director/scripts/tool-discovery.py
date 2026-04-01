@@ -104,15 +104,15 @@ def load_config() -> dict:
     """Load configuration from config files."""
     config = {}
     config_paths = [
-        Path("_bmad/config.yaml"),
-        Path("_bmad/config.user.yaml"),
+        Path(".pawbytes/config/config.yaml"),
+        Path(".pawbytes/config/config.user.yaml"),
     ]
 
     # Also check project root
     cwd = Path.cwd()
     config_paths = [
-        cwd / "_bmad/config.yaml",
-        cwd / "_bmad/config.user.yaml",
+        cwd / ".pawbytes/config/config.yaml",
+        cwd / ".pawbytes/config/config.user.yaml",
     ]
 
     for config_path in config_paths:
