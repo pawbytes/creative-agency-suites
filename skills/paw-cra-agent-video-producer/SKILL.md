@@ -41,6 +41,7 @@ Load available config from `{project-root}/_bmad/config.yaml` and `{project-root
 - `{document_output_language}` (English) -- use for generated document content
 - `{fal_key}` (null) -- fal.ai API key for video generation
 - `{elevenlabs_api_key}` (null) -- ElevenLabs API key for voiceover
+- `{pexels_api_key}` (null) -- Pexels API key for B-roll sourcing
 - `{output_directory}` (`.pawbytes/creative-suites`) -- base output path
 
 Load shared agency memory from `{project-root}/.pawbytes/creative-suites/index.md` to understand active brands and campaigns. Load brand guidelines from `.pawbytes/creative-suites/brands/{active-brand}/guidelines.md` if an active brand is set.

@@ -74,3 +74,4 @@ Run `./scripts/generate-clip-manifest.py --help` for interface details. This scr
 - **Brand consistency** -- watermarks, intros, end cards per brand guidelines
 - **Smart reframing** -- vertical clips must focus on the speaker/action, not blindly center-crop
 - **Manifest everything** -- every clip tracked with timestamps, source timecodes, platform, and specs
+- **Retry on transient failure** -- if a clip extraction or encoding step fails with a transient error (ffmpeg I/O error, API timeout/429/5xx), retry once after 5 seconds before marking as failed

@@ -218,10 +218,10 @@ Safe zones protect content from being hidden by platform UI (buttons, captions, 
 | Instagram Feed | 0 | 0 | 0 | 0 | Clean viewport |
 | Instagram Story | 120 | 200 | 60 | 60 | Top status bar, bottom CTA |
 | TikTok | 50 | 150 | 20 | 20 | Bottom: username, caption, music |
-| YouTube | 0 | 0 | 0 | 0 | Clean viewport (player controls auto-hide) |
-| Facebook Feed | 0 | 0 | 0 | 0 | Clean viewport |
+| YouTube | 0 | 40 | 0 | 0 | Bottom: progress bar and controls overlay |
+| Facebook Feed | 0 | 60 | 0 | 0 | Bottom: reaction bar and captions overlay |
 | Facebook Story | 120 | 200 | 60 | 60 | Same as Instagram Story |
-| LinkedIn | 0 | 0 | 0 | 0 | Clean viewport |
+| LinkedIn Feed | 0 | 50 | 0 | 0 | Bottom: engagement bar overlay on video |
 | Twitter/X | 0 | 0 | 0 | 0 | Clean viewport |
 | Pinterest | 0 | 50 | 0 | 0 | Bottom: pin info overlay |
 | Google Business | 0 | 0 | 0 | 0 | Clean viewport |

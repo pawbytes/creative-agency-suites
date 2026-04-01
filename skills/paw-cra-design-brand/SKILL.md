@@ -150,13 +150,13 @@ Export approved assets to final location:
 
 **Logos and Icons:**
 - Full color PNG (transparent background) at 512px and 1024px
-- SVG (if source supports it, or via background removal + trace)
+- SVG: Use Recraft V4 Pro's native SVG output when available. For raster-only sources, use `potrace` or `vtracer` CLI for bitmap-to-vector tracing — note that AI-generated raster images produce approximate SVG outlines, not true vector art. Flag in manifest as `svg_source: "traced"` vs `svg_source: "native"`.
 - Monochrome variant
 - Reversed (white on transparent) variant
 
 **Flyers:**
 - Digital: PNG at target dimensions, RGB
-- Print: High-res PNG (300 DPI) + PDF with bleed margins
+- Print: High-res PNG (300 DPI) + PDF with bleed margins. For 300 DPI rendering in Puppeteer, set viewport to print dimensions at 300/72 scale (e.g., A4 = `{ width: 2480, height: 3508, deviceScaleFactor: 1 }`). Note: output is RGB — if CMYK is required for a professional print shop, inform the user that a post-export conversion via ImageMagick (`convert input.png -colorspace CMYK output.tiff`) or a dedicated prepress tool is needed. Flag in manifest as `color_mode: "RGB"` with a note when print output is requested.
 
 **Banners and Avatars:**
 - PNG at exact target dimensions

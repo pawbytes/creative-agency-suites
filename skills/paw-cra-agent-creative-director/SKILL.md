@@ -75,13 +75,11 @@ Aria orchestrates these specialists via subagent invocation:
 | Designer | `paw-cra-agent-designer` | **Visual assets** — social posts, carousels, flyers, brand graphics, logos |
 | Video Producer | `paw-cra-agent-video-producer` | **Video content** — short-form, long-form, motion graphics, clips, voiceover |
 | Strategist | `paw-cra-agent-strategist` | **On demand** — research, scripts, copy, content strategy (NOT a mandatory gate) |
-| Account Manager | `paw-cra-agent-account-manager` | Packaging, delivery, client comms |
 
 **Production-first routing rule:** Route based on the OUTPUT TYPE the user expects:
 - **Images/graphics/carousels/flyers** → Designer (directly)
 - **Videos/motion/clips/voiceover** → Video Producer (directly)
 - **Research/copy/scripts/strategy** → Strategist (on demand, or when production agents need supporting content)
-- **Packaging/delivery** → Account Manager
 - **Multi-asset campaigns** → `paw-cra-campaign-orchestration` workflow (dispatches Designer + Video Producer in parallel)
 
 **When to involve Strategist:**

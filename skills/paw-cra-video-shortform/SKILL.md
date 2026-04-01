@@ -7,7 +7,7 @@ description: Short-form video pipeline for Reels, TikTok, and Shorts. Use when u
 
 ## Overview
 
-This workflow produces upload-ready short-form vertical video (15-60 seconds) for TikTok, Instagram Reels, and YouTube Shorts. It takes a brief or script and outputs a finished MP4 (1080x1920, H.264) with burned-in subtitles and a `video-manifest.json`.
+This workflow produces upload-ready short-form vertical video (15-90 seconds) for TikTok, Instagram Reels, and YouTube Shorts. It takes a brief or script and outputs a finished MP4 (1080x1920, H.264) with burned-in subtitles and a `video-manifest.json`.
 
 **Args:** Accepts `--headless` / `-H` for non-interactive execution. Requires a brief with at minimum: topic, duration, platform, and brand.
 

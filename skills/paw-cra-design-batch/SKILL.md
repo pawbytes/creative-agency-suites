@@ -161,7 +161,7 @@ Write completion status to campaign memory and daily log.
 ## Error Handling
 
 - **Missing fal_key:** Abort batch with clear message — cannot produce assets without generation capability
-- **Individual asset failure:** Log the failure, skip to next asset, include in manifest as `status: "failed"` with error reason
+- **Individual asset failure:** Log the failure. Retry once after a 5-second delay for transient errors (HTTP 429, 500, 502, 503, 504, timeout). If the retry also fails, skip to the next asset and include in manifest as `status: "failed"` with error reason and `retried: true`.
 - **Brand guidelines missing:** Warn and proceed with best-effort generation; flag all assets as `brand_validated: false` in manifest
 - **Template rendering failure:** Fall back to pure AI generation for that asset; note the fallback in manifest
 
