@@ -5,20 +5,31 @@
     "url": "https://github.com/pawbytes/creative-agency-suites"
   },
   "metadata": {
-    "description": "Full-stack AI creative agency — 3 specialist skills covering strategy, design, and creative direction",
-    "version": "0.1.0",
+    "description": "Full-stack AI creative agency suite — 4 specialist agents (Creative Director, Designer, Strategist, Video Producer) and 10 production workflows covering brand assets, social content, video, batch generation, and multi-platform export",
+    "version": "0.2.0",
     "repository": "https://github.com/pawbytes/creative-agency-suites"
   },
   "plugins": [
     {
       "name": "paw-creative-agency",
-      "description": "AI creative agency skills: Creative Director (orchestrator), Strategist (briefs, research, campaigns), Designer (social posts, carousels, flyers, brand assets)",
+      "description": "AI creative agency: Creative Director orchestrates Designer, Strategist, and Video Producer specialists across brand identity, social content, video production, batch campaigns, and multi-platform export workflows",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/paw-cra-creative-director",
-        "./skills/paw-cra-strategist",
-        "./skills/paw-cra-designer"
+        "./skills/paw-cra-agent-creative-director",
+        "./skills/paw-cra-agent-designer",
+        "./skills/paw-cra-agent-strategist",
+        "./skills/paw-cra-agent-video-producer",
+        "./skills/paw-cra-campaign-orchestration",
+        "./skills/paw-cra-content-research",
+        "./skills/paw-cra-design-batch",
+        "./skills/paw-cra-design-brand",
+        "./skills/paw-cra-design-social",
+        "./skills/paw-cra-multi-platform-export",
+        "./skills/paw-cra-quality-control",
+        "./skills/paw-cra-video-clips",
+        "./skills/paw-cra-video-longform",
+        "./skills/paw-cra-video-shortform"
       ]
     }
   ]
